@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$white: #fff;
+$blue: #1609a3;
+$black: #0000;
+$gray: #666;
+$deep-blue: #2816fc;
+$text-blue: #0b036f;
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+body {
+  font-family: Fira Code;
+}

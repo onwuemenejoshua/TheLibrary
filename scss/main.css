@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Fira Code;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 33px;
+  margin-left: 118px;
+  margin-right: 120px;
+}
+.header__library {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.header__library__lib {
+  color: #0b036f;
+}
+.header a {
+  color: #fff;
+  background-color: #2816fc;
+  margin: 20px;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 7px;
+  font-family: open sans;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#content__two {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=main.css.map */

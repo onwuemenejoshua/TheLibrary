@@ -1,0 +1,53 @@
+@mixin flexItem($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin margin {
+  margin-top: 33px;
+  margin-left: 118px;
+  margin-right: 120px;
+}
+
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+.header {
+  @include flexItem(row);
+  @include margin;
+
+  &__library {
+    text-transform: uppercase;
+    font-weight: weight(medium);
+
+    &__lib {
+      color: $text-blue;
+    }
+  }
+
+  a {
+    color: $white;
+    background-color: $deep-blue;
+    margin: 20px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-family: open sans;
+  }
+}
+
+#content {
+  @include flexItem(row);
+
+  &__one {
+  }
+
+  &__two {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
