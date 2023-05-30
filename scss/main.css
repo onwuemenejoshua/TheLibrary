@@ -24,7 +24,7 @@ body {
 .header__library__lib {
   color: #0b036f;
 }
-.header a {
+.header .sign {
   color: #fff;
   background-color: #2816fc;
   margin: 20px;
@@ -34,15 +34,92 @@ body {
   font-family: open sans;
 }
 
-#content {
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-top: 33px;
+  margin-left: 118px;
+  margin-right: 120px;
 }
-#content__two {
+.content__one {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.content__one__day {
+  font-family: open sans;
+  font-size: 20px;
+  font-weight: 700;
+}
+.content__one__read {
+  font-size: 25px;
+  font-weight: 400;
+}
+.content__one__read__dot {
+  font-size: 25px;
+}
+.content__one .started {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2816fc;
+  padding: 15px;
+  border-radius: 20px;
   width: 200px;
-  height: 200px;
+  text-align: center;
+}
+.content h2 {
+  text-transform: uppercase;
+  color: #0b036f;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.content__two {
+  width: 50%;
+}
+.content img {
+  width: 500px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
+}
+
+.latest-books {
+  margin-top: 33px;
+  margin-left: 118px;
+  margin-right: 120px;
+}
+.latest-books h3 {
+  font-weight: 500;
+}
+.latest-books p {
+  font-weight: 700;
+  font-size: 20px;
+  color: #2816fc;
+  margin-bottom: -50px;
+}
+.latest-books .arrow {
+  font-size: 100px;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 120px;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+.contact img {
+  width: 15px;
+  height: 15px;
+}
+.contact a {
+  color: black;
+  font-family: open sans;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: -3px;
 }/*# sourceMappingURL=main.css.map */

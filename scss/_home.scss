@@ -28,7 +28,7 @@
     }
   }
 
-  a {
+  .sign {
     color: $white;
     background-color: $deep-blue;
     margin: 20px;
@@ -39,15 +39,96 @@
   }
 }
 
-#content {
+.content {
   @include flexItem(row);
+  @include margin;
 
   &__one {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+
+    &__day {
+      font-family: open sans;
+      font-size: 20px;
+      font-weight: weight(bold);
+    }
+
+    &__read {
+      font-size: 25px;
+      font-weight: weight(regular);
+
+      &__dot {
+        font-size: 25px;
+      }
+    }
+    .started {
+      text-decoration: none;
+      color: $white;
+      background-color: $deep-blue;
+      // margin: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      width: 200px;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: $book;
+    font-weight: weight(bold);
+    font-size: 4rem;
   }
 
   &__two {
-    width: 200px;
-    height: 200px;
+    width: 50%;
+  }
+  img {
+    width: 500px;
+    height: 500px;
     object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.latest-books {
+  @include margin;
+
+  h3 {
+    font-weight: weight(medium);
+  }
+
+  p {
+    font-weight: weight(bold);
+    font-size: 20px;
+    color: $deep-blue;
+    margin-bottom: -50px;
+  }
+
+  .arrow {
+    font-size: 100px;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 120px;
+  margin-bottom: 50px;
+  gap: 10px;
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+
+  a {
+    color: black;
+    font-family: open sans;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: -3px;
   }
 }
