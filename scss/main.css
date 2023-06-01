@@ -17,6 +17,9 @@ body {
   margin-left: 118px;
   margin-right: 120px;
 }
+.header nav {
+  display: none;
+}
 .header__library {
   text-transform: uppercase;
   font-weight: 500;
@@ -32,6 +35,59 @@ body {
   text-decoration: none;
   border-radius: 7px;
   font-family: open sans;
+}
+@media screen and (max-width: 900px) {
+  .header .sign {
+    margin-right: -200px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 700px) {
+  .header .sign {
+    margin-right: -350px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header nav {
+    display: block;
+    justify-content: space-between;
+    color: #000;
+  }
+  .header nav .mainMenu {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    transition: right 1s ease;
+    display: none;
+    padding-right: 150px;
+  }
+  .header nav .openMenu {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+  }
+  .header nav .closeMenu {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+  }
+  .header ul > li {
+    list-style: none;
+  }
+  .header ul > li a {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
 }
 
 .content {
@@ -70,11 +126,31 @@ body {
   width: 200px;
   text-align: center;
 }
-.content h2 {
+@media screen and (max-width: 900px) {
+  .content .content__one__day {
+    font-size: 40px;
+  }
+}
+.content .Abook {
   text-transform: uppercase;
   color: #0b036f;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 70px;
+}
+@media screen and (max-width: 900px) {
+  .content .Abook {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 562px) and (max-width: 700px) {
+  .content .Abook {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 561px) {
+  .content .Abook {
+    font-size: 20px;
+  }
 }
 .content__two {
   width: 50%;
@@ -85,6 +161,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  margin-left: 118px;
 }
 
 .latest-books {
@@ -112,14 +189,16 @@ body {
   margin-bottom: 50px;
   gap: 10px;
 }
-.contact img {
-  width: 15px;
-  height: 15px;
-}
 .contact a {
   color: black;
   font-family: open sans;
   text-decoration: none;
   font-size: 20px;
   margin-top: -3px;
+}
+
+@media screen and (max-width: 900px) {
+  .contact {
+    margin-right: -200px;
+  }
 }/*# sourceMappingURL=main.css.map */

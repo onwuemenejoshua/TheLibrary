@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Onwuemene Joshua" />
     <title>The Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +20,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/scss/main.css" />
+    <script src="/js/home.js" defer></script>
   </head>
   <body>
     <div class="header">
+      <nav>
+        <div class="openMenu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="closeMenu">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="mainMenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li><a href="sign in.html">Sign in</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+      </nav>
       <h1 class="header__library">
         The <span class="header__library__lib">Library</span>
       </h1>
@@ -24,7 +51,7 @@
     <div class="content">
       <div class="content__one">
         <p class="content__one__day">Let's read every day</p>
-        <h2>A Book Can Change Your LIfe</h2>
+        <h2 class="Abook">A Book Can Change Your LIfe</h2>
         <p class="content__one__read">
           Read and Learn
           <span class="content__one__read__dot">&#8226;</span> Get Motivated
@@ -34,7 +61,7 @@
 
       <div class="content__two">
         <img
-          src="/image/pexels-christina-morillo-1181295.jpg"
+          src="/image/Ellipse 1 (1).png"
           alt="A lady reading a programming Book"
         />
       </div>
@@ -47,7 +74,7 @@
     </div>
 
     <div class="contact">
-      <img src="/image/Vector.png" alt="a phone logo for contact us" />
+      <i class="fa-solid fa-phone-volume"></i>
       <a href="contact us.html">Contact us</a>
     </div>
   </body>
