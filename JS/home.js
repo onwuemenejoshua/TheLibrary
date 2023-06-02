@@ -15,7 +15,7 @@ function show() {
 }
 
 function close() {
-  mainMenu.style.right = "-100%";
+  mainMenu.style.right = "-100";
   mainMenu.style.display = "none";
   openmenu.style.display = "block";
   closemenu.style.display = "none";

@@ -4,6 +4,7 @@
   margin: 0;
 }
 
+$latest-books: #0b036e;
 $book: #0b036f;
 $white: #fff;
 $blue: #1609a3;
@@ -17,8 +18,6 @@ $font-weight: (
   "bold": 700,
 );
 
-body {
-  font-family: Fira Code;
-}
-
-$mobile: 580px;
+// body {
+//   font-family: Fira Code;
+// }
