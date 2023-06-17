@@ -308,7 +308,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 70px;
 }
 .mainContent .imageSign img {
@@ -333,9 +333,6 @@
 .mainContent .mainForm form .form-name .form-name small {
   color: #dc3545;
 }
-.mainContent .mainForm form .form-name .form-name input:focus {
-  outline: none;
-}
 .mainContent .mainForm form .form-name .error {
   border-color: #dc3545;
 }
@@ -343,7 +340,10 @@
   border-color: #28a745;
 }
 .mainContent .mainForm form .form-name input {
-  padding: 10px;
+  padding: 15px;
+}
+.mainContent .mainForm form input:focus {
+  border: 1px solid #1609a3;
 }
 .mainContent .mainForm form .complete {
   display: flex;
@@ -389,23 +389,31 @@
   .mainContent {
     display: flex;
     flex-direction: row-reverse;
-    gap: 10px;
-    margin-top: 33px;
-    margin-left: 118px;
-    margin-right: 120px;
+    margin-top: 50px;
   }
   .mainContent .imageSign {
-    width: 20%;
+    width: 30vw;
+    margin-top: -50px;
+    margin-right: 70px;
+  }
+  .mainContent .imageSign img {
+    width: 320px;
+    height: 320px;
   }
   .mainContent .mainForm {
-    width: 80%;
+    width: 70vw;
+    margin-left: -50px;
   }
-  .mainContent .mainForm .name {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  .mainContent .mainForm form .form-name {
+    width: 70%;
   }
-  .mainContent .mainForm .form-name {
-    width: 60vw;
+}
+@media screen and (min-width: 1024px) {
+  .mainContent {
+    gap: 2px;
+  }
+  .mainContent .imageSign img {
+    width: 500px;
+    height: 500px;
   }
 }/*# sourceMappingURL=main.css.map */
