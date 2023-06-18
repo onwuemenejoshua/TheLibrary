@@ -5,6 +5,7 @@ const emailEl = document.querySelector("#email");
 const passwordEl = document.querySelector("#password");
 const confirmPasswordEl = document.querySelector("#confirmPassword");
 const details = document.querySelector("#details");
+const terms = document.querySelector("#terms");
 
 //  FOR THE HAMBURGER MENU.
 
@@ -97,3 +98,43 @@ const isPasswordSecure = (password) => {
   );
   return re.test(password);
 };
+
+// Return true if the input argument is empty
+const isRequired = (value) => (value === "" ? false : true);
+
+//the "showError() function" highlights the border of the input field and displays an error message if the input field is invalid.
+
+const showError = (input, message) => {
+  //get the form-name element i.e the parent element of the input field
+  const formName = input.parentElement;
+
+  //add the error class i
+  formName.classList.remove("success");
+  formName.classList.add("error");
+
+  //show the error message.
+  const error = formName.querySelector("small");
+  error.textContent = message;
+};
+
+const showSuccess = (input) => {
+  //get the form field element
+  const formName = input.parentElement;
+
+  //remove the error class
+  formName.classList.remove("error");
+  formName.classList.add("success");
+
+  //hide the error message
+  const error = formName.querySelector("small");
+  error.textContent = ""; //here it textContent of the error message is set to blank
+};
+
+//Validaion for the checkbox event
+
+function validateForm() {
+  if (!terms.checked) {
+    alert("Please accept the terms and conditons");
+    return false;
+  }
+}
