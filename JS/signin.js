@@ -5,7 +5,6 @@ const emailEl = document.querySelector("#email");
 const passwordEl = document.querySelector("#password");
 const confirmPasswordEl = document.querySelector("#confirmPassword");
 const details = document.querySelector("#details");
-const terms = document.querySelector("#terms");
 
 //  FOR THE HAMBURGER MENU.
 
@@ -130,11 +129,53 @@ const showSuccess = (input) => {
   error.textContent = ""; //here it textContent of the error message is set to blank
 };
 
-//Validaion for the checkbox event
+details.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-function validateForm() {
-  if (!terms.checked) {
-    alert("Please accept the terms and conditons");
-    return false;
+  //validate forms
+  let isEmailValid = checkEmail(),
+    isPasswordValid = checkPassword(),
+    isConfirmPasswordValid = checkConfirmPassword();
+
+  //the && operator is used to determine if the form is valid. the form is valid if all the field are valid.
+  let isFormValid = isEmailValid && isPasswordValid && isConfirmPasswordValid;
+
+  //submit to the server if the form is valid
+  if (isFormValid) {
   }
-}
+});
+
+//the debouncing techniques is basically to wait for the user to pause his/her typingfor a small amount of time before validating the input.
+
+const debounce = (fn, delay = 500) => {
+  let timeoutId;
+  return (...args) => {
+    // cancel the previous timer
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    // setup a new timer
+    timeoutId = setTimeout(() => {
+      fn.apply(null, args);
+    }, delay);
+  };
+};
+
+//this is used to instant signup. i.e  we are waiting for a small amount of time before validating the form, not submiting it before we validate
+
+details.addEventListener(
+  "input",
+  debounce(function (e) {
+    switch (e.target.id) {
+      case "email":
+        checkEmail();
+        break;
+      case "password":
+        checkPassword();
+        break;
+      case "confirm-password":
+        checkConfirmPassword();
+        break;
+    }
+  })
+);

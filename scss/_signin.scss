@@ -221,6 +221,12 @@
       margin-left: -50px;
 
       form {
+        .name {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          width: 70%;
+        }
         .form-name {
           width: 70%;
         }

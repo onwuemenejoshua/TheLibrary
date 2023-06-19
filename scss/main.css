@@ -404,6 +404,12 @@
     width: 70vw;
     margin-left: -50px;
   }
+  .mainContent .mainForm form .name {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 70%;
+  }
   .mainContent .mainForm form .form-name {
     width: 70%;
   }
